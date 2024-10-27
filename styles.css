@@ -14,7 +14,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    flex-direction: column;
 }
 
 body {
@@ -665,16 +664,19 @@ p {
 #reviews {
     padding: 4rem 1rem;
     padding-top: 100px;
+    padding-bottom: 5rem;
     background-color: #f7f7f7;
     text-align: center;
-    height: 100vh; /* Full viewport height */
-    background-image: url('https://img.freepik.com/premium-vector/luxurious-dark-blue-background-with-sparkling-gold-glitter-modern-elegant-abstract-background_907220-2064.jpg?w=1060'); /* Replace with your image path */
-    background-size: cover; /* Ensures the image covers the whole section */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents tiling */
+    min-height: 100vh; /* Minimum viewport height */
+    background-image: url('https://img.freepik.com/premium-vector/luxurious-dark-blue-background-with-sparkling-gold-glitter-modern-elegant-abstract-background_907220-2064.jpg?w=1060');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
+    position: relative;
+    z-index: 1;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
 }
@@ -751,7 +753,6 @@ p {
     padding: 4rem 1rem;
     padding-top: 100px;
     text-align: center;
-    height: 100vh; /* Full viewport height */
     background-image: url('https://img.freepik.com/premium-photo/3d-render-concept-phone-receiver-3d-art-design-illustration_460848-4957.jpg?ga=GA1.1.1690681970.1721450916&semt=ais_hybrid'); /* Replace with your image path */
     background-size: cover; /* Ensures the image covers the whole section */
     background-position: center; /* Centers the image */
