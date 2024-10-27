@@ -14,6 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    flex-direction: column;
 }
 
 body {
@@ -24,6 +25,7 @@ body {
     color: var(--secondary-color);
     overflow-x: hidden;
     scroll-behavior: smooth;
+    flex-direction: column;
 }
 
 a {
@@ -63,6 +65,8 @@ header {
     padding: 1rem;
     position: sticky;
     top: 0;
+    flex-direction: column;
+    flex-wrap: wrap;
     z-index: 1000;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
     transition: background-color var(--transition-base);
@@ -215,6 +219,7 @@ nav {
     flex-direction: column;
     position: absolute;
     background-color: #333;
+    flex-direction: column;
     top: 60px;
     left: 0;
     width: 100%;
@@ -279,6 +284,8 @@ nav {
     background: linear-gradient(135deg, rgba(255, 87, 34, 0.8), rgba(255, 193, 7, 0.8)), url('your-background-image.jpg') no-repeat center center/cover; /* Add your background image */
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     text-align: center;
     color: white;
@@ -379,14 +386,8 @@ p {
     background-color: var(--light-color);
     padding: 5rem 1rem;
     padding-top: 100px;
-    text-align: center;
-    background-image: url('https://img.freepik.com/free-vector/paper-style-core-values-background_23-2149079276.jpg?t=st=1729832457~exp=1729836057~hmac=bef1d7a0ed73e3e520130d0aa9f932b31795da4dbc93ec431b4a0c44676343f4&w=996');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
     text-align: center;
 }
 
@@ -394,7 +395,7 @@ p {
     font-size: 2.8rem;
     margin-bottom: 3rem;
     position: relative;
-    color: #ffffff;
+    color: #ac3ff3;
 }
 
 #services p {
@@ -440,6 +441,8 @@ p {
 #stores {
     background-color: var(--dark-color);
     color: var(--light-color);
+    flex-direction: column;
+    flex-wrap: wrap;
     padding: 4rem 1rem;
     padding-top: 100px;
 }
@@ -494,6 +497,7 @@ p {
     background-image: url('https://img.freepik.com/premium-vector/stage-with-stage-with-light-stage-with-words-it_720143-3359.jpg?ga=GA1.1.1690681970.1721450916&semt=ais_hybrid'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
+    flex-wrap: wrap;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -582,21 +586,16 @@ p {
 #promotions {
     padding: 4rem 1rem;
     padding-top: 100px;
-    background-color: #f4f4f4;
-    text-align: center;
-    justify-content: space-between;
-    background-image: url('https://img.freepik.com/free-vector/gradient-flash-sale-background_23-2149027975.jpg?t=st=1729833634~exp=1729837234~hmac=0964dc24ae4792a848b47f2c7d88a5b35a21af7cdef713ffd3d0ea9e24bab429&w=996');
-    background-size: cover; /* Ensures the image covers the whole section */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents tiling */
     flex-direction: column;
-    align-items: center;
+    background-color: #f4f4f4;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 #promotions h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: #ffff00;
+    color: #ac3ff3;
     position: relative;
 }
 
@@ -674,6 +673,7 @@ p {
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents tiling */
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -757,6 +757,7 @@ p {
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents tiling */
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -842,7 +843,8 @@ footer {
 }
 
 footer p {
-    margin: 1.5rem 0;
+    margin: .5rem 0;
+    font-size: large;
 }
 
 .social-icons {
