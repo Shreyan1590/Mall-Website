@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>V Square Mall - Your Shopping Destination</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>V Square Mall</h1>
+            </div>
+            <!-- Checkbox for toggle -->
+        <input type="checkbox" id="checkbox">
+    
+        <!-- Hamburger icon (toggle) -->
+        <label for="checkbox" class="toggle">
+            <div class="bars"></div>
+            <div class="bars"></div>
+            <div class="bars"></div>
+        </label>
+
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#stores">Stores</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#promotions">Promotions</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Welcome to V Square</h1>
+            <p>Your ultimate shopping experience awaits.</p>
+            <a href="#stores" class="cta-btn">Explore Stores</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>Discover the exclusive services available at V Square to enhance your shopping experience.</p>
+        <div class="service-cards">
+            <div class="card">
+                <img src="https://png.pngtree.com/background/20230425/original/pngtree-parking-lot-full-of-blue-picture-image_2478450.jpg" alt="Parking Service">
+                <h3>Free Parking</h3>
+                <p>Ample parking space available for all visitors.</p>
+            </div>
+            <div class="card">
+                <img src="https://media.istockphoto.com/id/928085574/photo/valet-giving-receipt-to-businessperson-sitting-inside-car.jpg?s=612x612&w=0&k=20&c=NRlZpmCbzbXY-WP11Hz3hIFEpvr3Uq16jemeobNOZqw=" alt="Valet Service">
+                <h3>Valet Parking</h3>
+                <p>Hassle-free valet parking service for your convenience.</p>
+            </div>
+            <div class="card">
+                <img src="https://img.freepik.com/free-vector/wifi-internet-vector-technology-icon-neon-purple-gradient-background_53876-112152.jpg" alt="Free Wi-Fi">
+                <h3>Free Wi-Fi</h3>
+                <p>Enjoy seamless browsing with our free mall-wide Wi-Fi.</p>
+            </div>
+            <div class="card">
+                <img src="https://media.istockphoto.com/id/1448506100/photo/male-hotel-receptionist-assisting-female-guest.jpg?s=612x612&w=0&k=20&c=xXJn95XgzSA4_LgGczr7ce-FnpcWXwYIr-fGH9yN_z0=" alt="Concierge Service">
+                <h3>Concierge Service</h3>
+                <p>Assistance with all your needs, from directions to reservations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stores Section -->
+    <section id="stores">
+        <h2>Our Stores</h2>
+        <p>Browse through a variety of stores offering the best in fashion, electronics, home decor, and more.</p>
+        <div class="store-categories">
+            <div class="category">
+                <h3>Fashion</h3>
+                <ul>
+                    <li><a href="https://www.zara.com/in/">Zara</a></li>
+                    <li><a href="https://www2.hm.com/en_in/">H&M</a></li>
+                    <li><a href="https://www.gucci.com/">Gucci</a></li>
+                    <li><a href="https://levi.in/">Levi's</a></li>
+                </ul>
+            </div>
+            <div class="category">
+                <h3>Electronics</h3>
+                <ul>
+                    <li><a href="https://www.apple.com/">Apple Store</a></li>
+                    <li><a href="https://www.samsung.com/">Samsung</a></li>
+                    <li><a href="https://www.sony.co.in/">Sony</a></li>
+                    <li><a href="https://www.bestbuy.com/">Best Buy</a></li>
+                </ul>
+            </div>
+            <div class="category">
+                <h3>Home Decor</h3>
+                <ul>
+                    <li><a href="https://www.ikea.com/">IKEA</a></li>
+                    <li><a href="https://www.potterybarn.in/">Pottery Barn</a></li>
+                    <li><a href="https://www.crateandbarrel.com/">Crate & Barrel</a></li>
+                    <li><a href="https://www.westelm.in/">West Elm</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events">
+        <h2>Upcoming Events</h2>
+        <p>Check out our exciting events happening at Mini Mall this season.</p>
+        <div class="event-cards">
+            <div class="card">
+                <img src="https://t4.ftcdn.net/jpg/06/52/95/39/240_F_652953949_YB0jOSYkzAzqRbgeOTCtGCMQhGrzd63A.jpg" alt="Fashion Show">
+                <h3>Spring Fashion Show</h3>
+                <p>Join us for the latest in spring fashion with renowned designers.</p>
+                <p><strong>Date:</strong> April 15, 2024</p>
+            </div>
+            <div class="card">
+                <img src="https://static.toiimg.com/photo/95442780.cms" alt="Food Festival">
+                <h3>Food Festival</h3>
+                <p>Enjoy gourmet cuisine from around the world.</p>
+                <p><strong>Date:</strong> May 20, 2024</p>
+            </div>
+            <div class="card">
+                <img src="https://img.freepik.com/free-photo/neon-motherboard-background_23-2151704917.jpg?ga=GA1.1.1690681970.1721450916&semt=ais_hybrid" alt="Electronics Expo">
+                <h3>Electronics Expo</h3>
+                <p>Discover the latest gadgets and innovations in tech.</p>
+                <p><strong>Date:</strong> June 5, 2024</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotions Section -->
+    <section id="promotions">
+        <h2>Current Promotions</h2>
+        <p><strong>Take advantage of these fantastic promotions while they last.</strong></p>
+        <div class="promo-cards">
+            <div class="card">
+                <h3>Buy 1 Get 1 Free at Levi's</h3>
+                <p>Stock up on your favorite jeans with this limited time offer.</p>
+                <p><strong>Ends:</strong> April 30, 2024</p>
+            </div>
+            <div class="card">
+                <h3>25% Off at IKEA</h3>
+                <p>Furnish your home with modern and affordable pieces.</p>
+                <p><strong>Ends:</strong> May 15, 2024</p>
+            </div>
+            <div class="card">
+                <h3>10% Cashback at Best Buy</h3>
+                <p>Get cashback on your electronics purchases over $500.</p>
+                <p><strong>Ends:</strong> June 10, 2024</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews">
+        <h2>What Our Customers Say</h2>
+        <p>Here's what some of our happy customers have to say about Mini Mall.</p>
+        <div class="reviews">
+            <div class="review">
+                <h3>John Doe</h3>
+                <p>"The Mini Mall has everything I need in one place. The customer service is amazing, and the stores are top-notch."</p>
+            </div>
+            <div class="review">
+                <h3>Jane Smith</h3>
+                <p>"I love the promotions they have here! I got a great deal on my new TV. Highly recommended!"</p>
+            </div>
+            <div class="review">
+                <h3>Emily Johnson</h3>
+                <p>"The food festival was incredible! Can't wait to attend more events at Mini Mall. It’s my go-to place for weekend outings."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Whether you have a question, suggestion, or just want to say hi, feel free to reach out.</p>
+        <form id="contact-form" action="submit-form.php" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; V Square Mall - All Rights Reserved | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-conditions.html">Terms & Conditions</a></p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="https://instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="https://twitter.com" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="https://linkedin.com" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            <a href="https://youtube.com" target="_blank"><img src="youtube-icon.png" alt="YouTube"></a>
+        </div>
+        <p>Designed and Developed By Shreyan.</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button onclick="scrollToTop()" id="back-to-top" title="Back to Top">
+        <i class="fa fa-arrow-up"></i>
+      </button>      
+    <script src="script.js"></script>
+</body>
+</html>
