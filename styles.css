@@ -172,107 +172,145 @@ nav {
 
 /* Label styling for the toggle */
 .toggle {
-    display: flex; /* Display it as flexbox */
-    flex-direction: column; /* Stack bars vertically */
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
-    width: 50px; /* Width of the toggle */
-    height: 40px; /* Height of the toggle */
-    cursor: pointer; /* Change cursor to pointer */
-    position: relative; /* Relative positioning for bars */
-    margin-left: 10px; /* Margin for spacing */
-    z-index: 999; /* Ensure it's on top of the nav */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+    margin-left: 10px;
+    z-index: 999;
+    transition: transform 0.3s ease-in-out;
+}
+
+.toggle:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
 }
 
 /* Bars styling */
 .bars {
-    width: 35px; /* Width of each bar */
-    height: 5px; /* Height of each bar */
-    background-color: #fff; /* Color of the bars */
-    margin: 3px 0; /* Space between bars */
-    transition: all 0.3s ease; /* Smooth transition for bars */
-}
-
-/* Change background color and animate bars when checked */
-#checkbox:checked + .toggle {
-    background-color: #28a745; /* Background color when on */
+    width: 35px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 5px 0;
+    transition: all 0.4s ease;
 }
 
 /* Transform bars when checked */
 #checkbox:checked + .toggle .bars:nth-child(1) {
-    transform: translateY(8px) rotate(45deg); /* Top bar to form an X */
+    transform: translateY(10px) rotate(45deg);
+    background-color: #28a745; /* Change color for a vivid look */
 }
 
 #checkbox:checked + .toggle .bars:nth-child(2) {
-    opacity: 0; /* Middle bar disappears */
+    opacity: 0;
+    transform: scale(0); /* Smooth disappearance */
 }
 
 #checkbox:checked + .toggle .bars:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg); /* Bottom bar to form an X */
+    transform: translateY(-10px) rotate(-45deg);
+    background-color: #28a745;
 }
 
-/* Nav links hidden initially */
+/* Nav links container */
 .nav-links {
     display: none;
-    list-style: none;
     flex-direction: column;
     position: absolute;
-    background-color: #333;
-    flex-direction: column;
-    top: 60px;
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphic effect */
+    backdrop-filter: blur(10px); /* Apply blur for glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Support for Safari */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    top: 70px;
     left: 0;
     width: 100%;
     z-index: 998;
+    transition: max-height 0.5s ease;
 }
 
 /* Show the navigation when checkbox is checked */
 #checkbox:checked ~ .nav-links {
-    display: flex; /* Display the nav items */
+    display: flex;
+    max-height: 500px; /* Smooth slide-in effect */
 }
 
-/* Nav link styling */
+/* Nav link items */
 .nav-links li {
     text-align: center;
     padding: 15px;
 }
 
-/* Mobile view - show hamburger and hide nav links initially */
-@media (max-width: 768px) {
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for nav links */
+.nav-links li a:hover {
+    color: #28a745;
+    transform: scale(1.1); /* Zoom effect */
+}
+
+/* Desktop navigation (default behavior) */
+@media (min-width: 769px) {
     .toggle {
-        display: flex; /* Show hamburger menu on small screens */
+        display: none; /* Hide hamburger menu on larger screens */
     }
 
     .nav-links {
+        display: flex;
+        flex-direction: row; /* Horizontal layout */
+        position: static;
+        background: none; /* Remove background for desktop */
+        backdrop-filter: none;
+        box-shadow: none;
+    }
+
+    .nav-links li {
+        margin: 0 15px;
+    }
+
+    .nav-links li a {
+        padding: 5px 10px;
+    }
+}
+
+/* Mobile navigation */
+@media (max-width: 768px) {
+    .nav-links {
         display: none; /* Hide nav links by default */
-        flex-direction: column; /* Stack nav links vertically */
         position: absolute;
-        background-color: #333;
-        top: 60px;
+        flex-direction: column;
+        top: 70px;
         left: 0;
         width: 100%;
         z-index: 1000;
         padding: 0;
+        overflow: hidden;
     }
 
     .nav-links li {
-        margin: 0; /* Remove margin between nav items */
+        margin: 0;
         text-align: center;
     }
 
     .nav-links li a {
-        padding: 15px; /* Padding around nav links */
+        padding: 15px;
         display: block;
-        color: #fff; /* Change color for mobile view */
+        color: #fff;
+        transition: background-color 0.3s ease;
     }
 
-    /* When the checkbox is checked, display the nav links */
+    /* When checkbox is checked, display the nav links */
     #checkbox:checked ~ .nav-links {
-        display: flex; /* Show nav links */
-    }
-
-    /* Optional: Add a hover effect for nav links */
-    .nav-links li a:hover {
-        background-color: #555; /* Darker background on hover */
+        display: flex;
     }
 }
 
@@ -429,6 +467,18 @@ p {
 .card img {
     width: 100%;
     border-radius: 10px;
+}
+
+.card2 {
+    background-color: var(--light-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.card2 img {
+    width: 195px;
 }
 
 .card:hover {
@@ -849,20 +899,37 @@ footer p {
 }
 
 .social-icons {
-    margin-top: 1.5rem;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
 }
 
-.social-icons a img {
-    width: 35px;
-    margin: 0 10px;
-    filter: invert(100%);
-    transition: transform var(--transition-base);
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    background-color: #333;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.social-icons a:hover img {
-    transform: scale(1.2);
+.social-icons a:hover {
+    background-color: #0077b6;
+    transform: scale(1.1);
 }
 
+.social-icons a.facebook:hover { background-color: #1877f2; }
+.social-icons a.instagram:hover { background-color: #e1306c; }
+.social-icons a.twitter:hover { background-color: #1da1f2; }
+.social-icons a.linkedin:hover { background-color: #0077b5; }
+.social-icons a.youtube:hover { background-color: #ff0000; }
 /* Media Queries for smaller screens */
 @media (max-width: 768px) {
     #hero {

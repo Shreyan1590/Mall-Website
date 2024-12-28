@@ -8,6 +8,11 @@ gsap.from("#events", { duration: 1, opacity: 0, y: 100, ease: "power2.out", dela
 gsap.from("#promotions", { duration: 1, opacity: 0, y: 100, ease: "power2.out", delay: 1 });
 gsap.from("#reviews", { duration: 1, opacity: 0, y: 100, ease: "power2.out", delay: 1.5 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.from(".hero-content", { duration: 1, opacity: 0, y: -50 });
+  gsap.from(".service-cards .card", { duration: 1, opacity: 0, y: 20, stagger: 0.3 });
+});
+
 // Get elements
 const checkbox = document.getElementById('checkbox'); // The hamburger checkbox
 const navLinks = document.querySelectorAll('.nav-links li a'); // All the nav links
